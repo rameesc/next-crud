@@ -1,0 +1,45 @@
+.containet{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    table{
+        border-collapse: collapse;
+        width: 30%;
+        border: 1px solid black;
+        tr{
+            border: 1px solid black;
+            height: 35px;
+            td{
+                text-align: center;
+                border: 1px solid black;
+            }
+            &:nth-child(even){
+                background-color: rgb(212, 223, 231);
+            }
+        }
+        thead{
+            background-color: rgb(212, 223, 231);
+        }
+        tbody{
+            #delete{
+                background-color: rgb(180, 53, 31);
+                cursor: pointer;
+                border: none;
+                color: aliceblue;
+                width: 130px;
+                border-radius: 2px;
+                padding: 3px;
+                &:active{
+                    transform: scale(1.8);
+                    transition: all 1s ease-in-out;
+                }
+            }
+            #edite{
+                background-color: rgb(5, 97, 43);
+                @extend #delete
+            }
+
+        }
+    }
+}
